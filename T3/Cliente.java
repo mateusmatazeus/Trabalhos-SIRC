@@ -16,7 +16,7 @@ public class Cliente {
         IvParameterSpec ivSpec = createCtrIvForAES(1, random);
         Key key = createKeyForAES(256, random);
         Cipher cipher = Cipher.getInstance("AES/CTR/NoPadding", "SunJCE");
-        String input = "Transferir EUROS:0000100 to AC 1234-5678";
+        String input = "Voce deve estudar SIRC";
 
         System.out.println("Mensagem original: " + input);
 
@@ -29,14 +29,14 @@ public class Cliente {
 
             // Envie a mensagem cifrada para Bob (servidor)
             outputStream.write(cipherText);
-            System.out.println("Ciphertext enviado para Bob: " + toHex(cipherText));
+            System.out.println("Ciphertext enviado para o destinatario: " + toHex(cipherText));
 
             // Receba uma possível resposta de Bob (opcional)
             byte[] responseBytes = new byte[1024];
             int bytesRead = inputStream.read(responseBytes);
             if (bytesRead != -1) {
                 String response = new String(responseBytes, 0, bytesRead, "UTF-8");
-                System.out.println("Resposta de Bob: " + response);
+                System.out.println("Resposta do destinatario: " + response);
             }
         }
     }
