@@ -9,7 +9,7 @@ public class Destinatario {
         String algoritmo = "AES";
         String modo = "ECB";
         String padding = "PKCS5Padding";
-        String chaveString = "chave_secreta123"; // A mesma chave secreta usada pelo remetente
+        String chaveString = "chave_secreta123";
 
         // Converter a chave de string para um array de bytes
         byte[] chaveBytes = chaveString.getBytes("UTF-8");
