@@ -15,7 +15,7 @@ public class Atacante {
 
             // Envie a mensagem modificada para Bob (servidor)
             outputStream.write(modifiedCipherText);
-            System.out.println("Mensagem modificada enviada para Bob: " + new String(modifiedCipherText, "UTF-8"));
+            System.out.println("Mensagem modificada enviada para o Destinatario: " + new String(modifiedCipherText, "UTF-8"));
         }
     }
 }
