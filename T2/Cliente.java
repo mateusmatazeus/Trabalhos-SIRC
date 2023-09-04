@@ -9,7 +9,7 @@ public class Cliente {
         String algoritmo = "AES";
         String modo = "ECB";
         String padding = "PKCS5Padding";
-        String chaveString = "chave_secreta123"; // Sua chave secreta
+        String chaveString = "chave_secreta123";
         String arquivoCifrado = "mensagem_cifrada.txt"; // Nome do arquivo para salvar a mensagem cifrada
 
         // Converter a chave de string para um array de bytes
