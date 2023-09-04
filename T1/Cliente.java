@@ -6,7 +6,7 @@ import java.util.Base64;
 
 public class Cliente {
     public static void main(String[] args) throws Exception {
-        String mensagem = "Mensagem secreta";
+        String mensagem = "Vamos a praia do Wimbi";
         String algoritmo = "AES";
         String modo = "ECB";
         String padding = "PKCS5Padding";
