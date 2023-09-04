@@ -13,9 +13,9 @@ public class Destinatario {
     public static void main(String[] args) throws Exception {
         int port = 12345;
         ServerSocket serverSocket = new ServerSocket(port);
-        System.out.println("Aguardando conexão com Alice...");
+        System.out.println("Aguardando conexão com o Cliente...");
         Socket socket = serverSocket.accept();
-        System.out.println("Conexão estabelecida com Alice.");
+        System.out.println("Conexão estabelecida com o Cliente.");
 
         SecureRandom random = new SecureRandom();
         IvParameterSpec ivSpec = createCtrIvForAES(1, random);
@@ -32,10 +32,10 @@ public class Destinatario {
             // Decifra a mensagem
             cipher.init(Cipher.DECRYPT_MODE, key, ivSpec);
             byte[] plainText = cipher.doFinal(cipherText);
-            System.out.println("Mensagem decifrada por Bob: " + new String(plainText, "UTF-8"));
+            System.out.println("Mensagem decifrada pelo Desinatario: " + new String(plainText, "UTF-8"));
 
             // Envie uma resposta para Alice (opcional)
-            String response = "Mensagem recebida e decifrada por Bob.";
+            String response = "Mensagem recebida e decifrada pelo Destinatario.";
             byte[] responseBytes = response.getBytes("UTF-8");
             outputStream.write(responseBytes);
         }
